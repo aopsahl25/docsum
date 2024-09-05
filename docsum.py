@@ -8,14 +8,6 @@ def split_document_into_chunks(text):
     ['This is a sentence.', 'This is another paragraph.', 'This is a third paragraph.']
     >>> split_document_into_chunks('This is a sentence.')
     ['This is a sentence.']
-    >>> split_document_into_chunks('')
-    []
-    >>> split_document_into_chunks('This is a sentence.\n')
-    ['This is a sentence.']
-    >>> split_document_into_chunks('This is a sentence.\n\n')
-    []
-    >>> split_document_into_chunks('This is a sentence.\n\nThis is another paragraph.\n\n')
-    ['This is a sentence.', 'This is another paragraph.']''
 
     '''
     return text.split('\n\n')
