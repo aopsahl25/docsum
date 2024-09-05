@@ -20,8 +20,7 @@ def split_document_into_chunks(text):
     '''
     return text.split('\n\n')
 
-
-if __name__ == '__main__':
+#if __name__ == '__main__':
 
 import os
 from groq import Groq
@@ -63,4 +62,3 @@ chat_completion = client.chat.completions.create(
     model="llama3-8b-8192",
 )
 print(chat_completion.choices[0].message.content)
-#
