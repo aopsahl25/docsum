@@ -1,3 +1,5 @@
+![](https://github.com/aopsahl25/docsum/workflows/tests/badge.svg)
+
 Using an LLM on the command line to summarize documents at a 1st grade reading level
 
 The following is an example summary of a news article from a Mexican newspaper writing about how the US government is handling immigration:
