@@ -6,7 +6,7 @@ The following is an example summary of a news article from a Mexican newspaper w
 
 $ python3 docsum.py docs/news-mx.txt
 
-Here is a summary of the article at a 1st grade reading level:
+Here is a summary of the article at a first grade reading level:
 
 The government of the United States has lost track of over 32,000 young people who came to the country alone. They don't know where these kids are or how they are doing. Some of these kids might be in danger. They might be hurt or treated badly. That's because the government agency in charge of helping these kids hasn't been doing a good job.
 
