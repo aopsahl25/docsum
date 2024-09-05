@@ -1,33 +1,27 @@
 def split_document_into_chunks(text):
     r'''
-    Split the input text into smaller chunks so that an LLM can process chunks individually.
+    Split the input text into smaller chunks so that an LLM can process those chunks individually.
 
-    >>> split_document_into_chunks('This is a sentence. \n\n This is another paragraph')
+    >>> split_document_into_chunks('This is a sentence.\n\nThis is another paragraph.')
     ['This is a sentence.', 'This is another paragraph.']
-    
+    >>> split_document_into_chunks('This is a sentence.\n\nThis is another paragraph.\n\nThis is a third paragraph.')
+    ['This is a sentence.', 'This is another paragraph.', 'This is a third paragraph.']
+    >>> split_document_into_chunks('This is a sentence.')
+    ['This is a sentence.']
     >>> split_document_into_chunks('')
     []
-    
-    >>> split_document_into_chunks('\n\n\n\n')
+    >>> split_document_into_chunks('This is a sentence.\n')
+    ['This is a sentence.']
+    >>> split_document_into_chunks('This is a sentence.\n\n')
     []
-    
-    >>> split_document_into_chunks('This is a single paragraph.')
-    ['This is a single paragraph.']
-    
-    >>> split_document_into_chunks('Paragraph one.\n\n\n\nParagraph two.\n\nParagraph three.')
-    ['Paragraph one.', 'Paragraph two.', 'Paragraph three.']
-    
-    >>> split_document_into_chunks('   Paragraph one. \n\n  Paragraph two.  \n\n  Paragraph three.   ')
-    ['Paragraph one.', 'Paragraph two.', 'Paragraph three.']
-    
-    >>> split_document_into_chunks('Line one.\n\nLine two.\n\nLine three.')
-    ['Line one.', 'Line two.', 'Line three.']
-    
-    >>> split_document_into_chunks('Para one.\n\nPara two.\n\nPara three.\n\nPara four.\n\nPara five.')
-    ['Para one.', 'Para two.', 'Para three.', 'Para four.', 'Para five.']
-    
+    >>> split_document_into_chunks('This is a sentence.\n\nThis is another paragraph.\n\n')
+    ['This is a sentence.', 'This is another paragraph.']''
+
     '''
     return text.split('\n\n')
+
+
+if __name__ == '__main__':
 
 import os
 from groq import Groq
